@@ -3,94 +3,383 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muse-Music Player</title>
+    <title>Muse - Music Player</title>
     <script src="https://kit.fontawesome.com/b555bddef9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./external.css" />
+    <style>
+        main {
+            display: flex;
+            flex-direction: row;
+        }
+       main>nav {
+        background-color: #2f2b45;
+        color: #7f79a1;
+        width: 20vw;
+       }
+       nav .menu-list {
+        margin-block: 20px;
+        margin-inline-start: 65px;
+       }
+       h5 {
+        font-size: 14px;
+        color:#7f79a1;
+        font-weight: normal;
+       }
+       .menu-list li {
+        list-style-type: none;
+        font-size: 18px;
+        padding-block: 5px;
+        margin-left: 50px;
+       }
+       .menu-list li>i {
+        position: absolute;
+        transform: translateX(-50%);
+        margin-inline-start: -35px;
+       }
+       nav img {
+        height: 40px;
+        margin: 10px 50px;
+       }
+       nav button {
+        margin-top: 10px;
+        background-color: transparent;
+        border: 2px dashed white;
+        border-radius: 40px;
+        color: white;
+        font-size: 15px;
+        padding: 10px 20px;
+       }
+       nav button i {
+        padding-right:5px;
+       }
+       .menu-list li.active {
+        background-image: linear-gradient(90deg,#ffffff4e ,#ffffff00);
+        color: white;
+        margin-left: -10px;
+        padding-left: 60px;
+        border-right: 5px solid white;
+       }
+       li.active i {
+       }
+       main>section#music-container {
+        background-color: #29263f;
+        width: 80vw;
+       }
+       #music-container header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+       }
+       #music-container nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+       }
+       img[src="./assets/user-avatar.png"] {
+        height: 70px;
+       }
+
+
+       
+    </style>
 </head>
 <body>
     <main>
         <nav>
-            <img src="logo.png" alt="main logo">
-            <div id="Menu Categories-1" class="menu-list">
+            <img src="logo.png" alt="muse-logo"  />
+            <div id="menu-categories-1" class="menu-list">
                 <h5>MENU</h5>
-                <li><i class="fa-solid fa-music"></i> Explore</li>
-                <li><i class="fa-brands fa-soundcloud"></i>Genres</li>
+                <li><i class="fa-solid fa-music"></i>Explore</li>
+                <li class="active"><i class="fa-brands fa-soundcloud"></i>Genres</li>
                 <li><i class="fa-solid fa-microphone"></i>Artists</li>
                 <li><i class="fa-solid fa-compact-disc"></i>Albums</li>
             </div>
-            <div id="Menu Categories-2" class="menu-list">
+            <div id="menu-categories-2"  class="menu-list">
                 <h5>LIBRARY</h5>
-                <li><i class="fa-solid fa-music"></i>Recent</li>
-                <li><i class="fa-brands fa-soundcloud"></i>Albums</li>
-                <li><i class="fa-solid fa-microphone"></i>Favourites</li>
+                <li><i class="fa-solid fa-clock"></i>Recent</li>
+                <li><i class="fa-solid fa-compact-disc"></i>Albums</li>
+                <li><i class="fa-solid fa-heart"></i>Favourites</li>
             </div>
-            <div id="Menu Categories-3" class="menu-list">
+            <div id="menu-categories-3"  class="menu-list">
                 <h5>PLAYLIST</h5>
-                <li><i class="fa-solid fa-music"></i>Good Vibes</li>
-                <li><i class="fa-brands fa-soundcloud"></i>Best Jazz</li>
-                <li><i class="fa-solid fa-microphone"></i>Party</li> 
-                
-                <li><i class="fa-solid fa-compact-disc"></i>Add Playlist</li>
+                <li><i class="fa-solid fa-circle-play"></i>Good vibes</li>
+                <li><i class="fa-solid fa-circle-play"></i>Best Jazz</li>
+                <li><i class="fa-solid fa-circle-play"></i>Party</li>
+                <button><i class="fa-solid fa-add"></i>Add playlist</button>
             </div>
         </nav>
         <section id="music-container">
             <header>
                 <nav>
                     <li>Home</li>
-                    <li>Pool</li>
-                    <li>NFT</li>
-                    <li>Launchpool/Launchpad</li>
-                    <li>Work With Us</li>
+                    <li>Pools</li>
+                    <li>NFTs</li>
+                    <li>Launchpad</li>
+                    <li>Work with us</li>
                 </nav>
                 <div id="user-area">
                     <div id="user-info">
-                        <div id="username">Debasmit</div> 
-                        <div id="User-dropdown">
-                            <button id="dropdown-btn">sfw334ggr3r</button>
+                        <div id="username">Debasmit</div>
+                        <div id="user-dropdown">
+                            <button id="dropdown-btn">fthhs898</button>
                             <i class="fa-solid fa-caret-down"></i>
                             <div id="dropdown-content">
                                 <a href="">Profile</a>
                                 <a href="">Settings</a>
-                                <a href="">Notification</a>
-                                <a href="">LogOut</a>
+                                <a href="">Notifications</a>
+                                <a href="">Logout</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <img src="user-avatar.png" />
+                </div>
+            </header>
+            <main>
+                <section id="music-area">
+                    <section id="hero">
+                        <div id="hero-action">
+                            <H2>Trending New Hits</H2>
+                            <h1>Break My Heart</h1>
+                            <h3>Dua Lipa</h3>
+                            <div id="cta">
+                                <button id="cta-button">Listen Now</button>
+                                <div id="cta-icon-underlay">
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
+                                <div id="cta-comment">
+                                    <span>+30% APR</span>
+                                    <span>33M streams</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="hero-image">
+                            <img src="hero-img.png" />
+                        </div>
+                    </section>
+                    <section id="top-artists">
+                        <header>
+                            <h4>Top Artists</h4>
+                            <a href="#">See all</a>
+                        </header>
+                        <div id="song-list">
+                            <div class="song-item">
+                                <img src="song-label.jpeg" id="song-profile-image" />
+                                <div id="song-details">
+                                    <span>Artist Name</span>
+                                    <span>44M views</span>
+                                </div>
+                            </div>
+                            <div class="song-item">
+                                <img src="song-label.jpeg" id="song-profile-image" />
+                                <div id="song-details">
+                                    <span>Artist Name</span>
+                                    <span>44M views</span>
+                                </div>
+                            </div>
+                            <div class="song-item">
+                                <img src="song-label.jpeg" id="song-profile-image" />
+                                <div id="song-details">
+                                    <span>Artist Name</span>
+                                    <span>44M views</span>
+                                </div>
+                            </div>
+                            <div class="song-item">
+                                <img src="song-label.jpeg" id="song-profile-image" />
+                                <div id="song-details">
+                                    <span>Artist Name</span>
+                                    <span>44M views</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="new-hits">
+                        <header>
+                            <h4>New Hits</h4>
+                            <a href="#">See all</a>
+                        </header>
+                        <div id="song-list">
+                            <div class="song-item">
+                                <img src="song-label.jpeg" id="song-profile-image" />
+                                <div id="song-details">
+                                    <span>Artist Name</span>
+                                    <span>44M views</span>
+                                </div>
+                            </div>
+                            <div class="song-item">
+                                <img src="song-label.jpeg" id="song-profile-image" />
+                                <div id="song-details">
+                                    <span>Artist Name</span>
+                                    <span>44M views</span>
+                                </div>
+                            </div>
+                            <div class="song-item">
+                                <img src="song-label.jpeg" id="song-profile-image" />
+                                <div id="song-details">
+                                    <span>Artist Name</span>
+                                    <span>44M views</span>
+                                </div>
+                            </div>
+                            <div class="song-item">
+                                <img src="song-label.jpeg" id="song-profile-image" />
+                                <div id="song-details">
+                                    <span>Artist Name</span>
+                                    <span>44M views</span>
+                                </div>
+                            </div>
+                            <div class="song-item">
+                                <img src="song-label.jpeg" id="song-profile-image" />
+                                <div id="song-details">
+                                    <span>Artist Name</span>
+                                    <span>44M views</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <aside>
+                    <h4>Hot Boosts</h4>
+                    <div id=" song-list">
+                        <div class="song-item">
+                            <div class="song-profile">
+                                <img src="song-label.jpeg" id="song-profile-image" />
+                                <div id="song-details">
+                                    <span>Song Name</span>
+                                    <span>Artist Name</span>
+                                </div>
+                                <div id="song-views">30% APR</div>
+                            </div>
+                            <div id="play-underlay">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="song-item">
+                            <div class="song-profile">
+                                <img src="song-label.jpeg" id="song-profile-image" />
+                                <div id="song-details">
+                                    <span>Song Name</span>
+                                    <span>Artist Name</span>
+                                </div>
+                                <div id="song-views">30% APR</div>
+                            </div>
+                            <div id="play-underlay">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="song-item">
+                            <div class="song-profile">
+                                <img src="song-label.jpeg" id="song-profile-image" />
+                                <div id="song-details">
+                                    <span>Song Name</span>
+                                    <span>Artist Name</span>
+                                </div>
+                                <div id="song-views">30% APR</div>
+                            </div>
+                            <div id="play-underlay">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="song-item">
+                            <div class="song-profile">
+                                <img src="song-label.jpeg" id="song-profile-image" />
+                                <div id="song-details">
+                                    <span>Song Name</span>
+                                    <span>Artist Name</span>
+                                </div>
+                                <div id="song-views">30% APR</div>
+                            </div>
+                            <div id="play-underlay">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="song-item">
+                            <div class="song-profile">
+                                <img src="song-label.jpeg" id="song-profile-image" />
+                                <div id="song-details">
+                                    <span>Song Name</span>
+                                    <span>Artist Name</span>
+                                </div>
+                                <div id="song-views">30% APR</div>
+                            </div>
+                            <div id="play-underlay">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="song-item">
+                            <div class="song-profile">
+                                <img src="song-label.jpeg" id="song-profile-image" />
+                                <div id="song-details">
+                                    <span>Song Name</span>
+                                    <span>Artist Name</span>
+                                </div>
+                                <div id="song-views">30% APR</div>
+                            </div>
+                            <div id="play-underlay">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="song-item">
+                            <div class="song-profile">
+                                <img src="song-label.jpeg" id="song-profile-image" />
+                                <div id="song-details">
+                                    <span>Song Name</span>
+                                    <span>Artist Name</span>
+                                </div>
+                                <div id="song-views">30% APR</div>
+                            </div>
+                            <div id="play-underlay">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="song-item">
+                            <div class="song-profile">
+                                <img src="song-label.jpeg" id="song-profile-image" />
+                                <div id="song-details">
+                                    <span>Song Name</span>
+                                    <span>Artist Name</span>
+                                </div>
+                                <div id="song-views">30% APR</div>
+                            </div>
+                            <div id="play-underlay">
+                                <i class="fa-solid fa-play"></i>
                             </div>
                         </div>
                     </div>
-                    <img src="user-avatar.png">
-                </div>
-            </header>
+                </aside>
+            </main>
         </section>
     </main>
 
     <footer>
-        <div id="song-profile"></div>
-            <img src="song-label.jpeg"id="song-profile-image/">
+        <div class="song-profile">
+            <img src="song-label.jpeg" id="song-profile-image" />
             <div id="song-details">
                 <span>Song Name</span>
                 <span>Artist Name</span>
             </div>
             <div id="song-views">30% APR</div>
         </div>
-        <div id="play-underlay">
-            <i class="fa-solid fa-play"></i>
-        </div>
-        <div id="music-player"> 
-            <div id="music-control">
+        <div id="music-player">
+            <div id="music-controls">
                 <i class="fa-solid fa-backward-step"></i>
                 <i class="fa-solid fa-play"></i>
                 <i class="fa-solid fa-pause"></i>
                 <i class="fa-solid fa-forward-step"></i>
             </div>
-             <div id="song-status">
-                <input type="range"max="100"min="0"value="0"/>
+            <div id="song-status">
+                <input type="range" max="1000" min="0" value="70" />
                 <time>00:35</time>
-             </div>
-             <div id="wishlist">
+            </div>
+            <div id="wishlist">
+                <i class="fa-regular fa-heart"></i>
                 <i class="fa-solid fa-heart"></i>
-             </div>
+            </div>
         </div>
-        <div id="volume-control">
+        <div id="volume-controls">
             <i class="fa-solid fa-volume-high"></i>
-            <input type="range"max="100"min="0"value="70"/>
+            <input type="range" max="100" min="0" value="70" />
         </div>
     </footer>
 </body>
