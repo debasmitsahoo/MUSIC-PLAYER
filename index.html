@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muse-Music Player</title>
+    <script src="https://kit.fontawesome.com/b555bddef9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <nav>
+            <img src="logo.png" alt="main logo">
+            <div id="Menu Categories-1" class="menu-list">
+                <h5>MENU</h5>
+                <li><i class="fa-solid fa-music"></i> Explore</li>
+                <li><i class="fa-brands fa-soundcloud"></i>Genres</li>
+                <li><i class="fa-solid fa-microphone"></i>Artists</li>
+                <li><i class="fa-solid fa-compact-disc"></i>Albums</li>
+            </div>
+            <div id="Menu Categories-2" class="menu-list">
+                <h5>LIBRARY</h5>
+                <li><i class="fa-solid fa-music"></i>Recent</li>
+                <li><i class="fa-brands fa-soundcloud"></i>Albums</li>
+                <li><i class="fa-solid fa-microphone"></i>Favourites</li>
+            </div>
+            <div id="Menu Categories-3" class="menu-list">
+                <h5>PLAYLIST</h5>
+                <li><i class="fa-solid fa-music"></i>Good Vibes</li>
+                <li><i class="fa-brands fa-soundcloud"></i>Best Jazz</li>
+                <li><i class="fa-solid fa-microphone"></i>Party</li> 
+                
+                <li><i class="fa-solid fa-compact-disc"></i>Add Playlist</li>
+            </div>
+        </nav>
+        <section id="music-container">
+            <header>
+                <nav>
+                    <li>Home</li>
+                    <li>Pool</li>
+                    <li>NFT</li>
+                    <li>Launchpool/Launchpad</li>
+                    <li>Work With Us</li>
+                </nav>
+                <div id="user-area">
+                    <div id="user-info">
+                        <div id="username">Debasmit</div> 
+                        <div id="User-dropdown">
+                            <button id="dropdown-btn">sfw334ggr3r</button>
+                            <i class="fa-solid fa-caret-down"></i>
+                            <div id="dropdown-content">
+                                <a href="">Profile</a>
+                                <a href="">Settings</a>
+                                <a href="">Notification</a>
+                                <a href="">LogOut</a>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="user-avatar.png">
+                </div>
+            </header>
+        </section>
+    </main>
+
+    <footer>
+        <div id="song-profile"></div>
+            <img src="song-label.jpeg"id="song-profile-image/">
+            <div id="song-details">
+                <span>Song Name</span>
+                <span>Artist Name</span>
+            </div>
+            <div id="song-views">30% APR</div>
+        </div>
+        <div id="play-underlay">
+            <i class="fa-solid fa-play"></i>
+        </div>
+        <div id="music-player"> 
+            <div id="music-control">
+                <i class="fa-solid fa-backward-step"></i>
+                <i class="fa-solid fa-play"></i>
+                <i class="fa-solid fa-pause"></i>
+                <i class="fa-solid fa-forward-step"></i>
+            </div>
+             <div id="song-status">
+                <input type="range"max="100"min="0"value="0"/>
+                <time>00:35</time>
+             </div>
+             <div id="wishlist">
+                <i class="fa-solid fa-heart"></i>
+             </div>
+        </div>
+        <div id="volume-control">
+            <i class="fa-solid fa-volume-high"></i>
+            <input type="range"max="100"min="0"value="70"/>
+        </div>
+    </footer>
+</body>
+</html>
